@@ -23,7 +23,7 @@
         //"cpu",
         //"memory",
         //"temperature",
-        //"backlight",
+        "backlight",
         "keyboard-state",
         "hyprland/language",
         "battery",
@@ -161,7 +161,8 @@
         "tooltip-format": "    ({signalStrength}%)  {essid}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "    ({signalStrength}%)  {essid}",
+        //"format-alt": "    ({signalStrength}%)  {essid}",
+        "on-click": "/home/felix/.config/waybar/scripts/wifimenu",
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

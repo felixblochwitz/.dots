@@ -21,6 +21,7 @@ end
 
 local function set_active_scheme()
   local file = os.getenv("XDG_CONFIG_HOME") .. "/nvim/lua/config/colorscheme.txt"
+  print(os.getenv("XDG_CONFIG_HOME"))
   local r = io.open(file, "r")
   local active_scheme = r:read()
   vim.cmd("colorscheme " .. active_scheme)

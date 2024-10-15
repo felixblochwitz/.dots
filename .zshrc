@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell" I'm using starship for now
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -141,9 +141,11 @@ alias sv='source .venv/bin/activate'
 
 export GIT_EDITOR=nvim
 SECRETS_FILE="$XDG_CONFIG_HOME/secrets/keys"
-echo $SECRETS_FILE
 if [ -f "$SECRETS_FILE" ]; then
   export ANTHROPIC_API_KEY=$(sed -n '1p' "$SECRETS_FILE")
 fi
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME'
+
+# starship prompt
+eval "$(starship init zsh)"

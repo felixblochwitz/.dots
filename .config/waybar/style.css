@@ -1,14 +1,15 @@
+@import "macchiato.css";
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family:FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
+    background-color: shade(@base, 0.5);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    color: @sapphire;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -58,7 +59,7 @@ button:hover {
 }
 
 #workspaces button {
-    color: #f2b773;
+    color: @sapphire;
     padding: 0 5px;
     background-color: transparent;
     border-radius: 6px;
@@ -69,7 +70,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    background-color: #64727D;
+    background-color: @surface1;
     box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -78,7 +79,7 @@ button:hover {
 }
 
 #mode {
-    background-color: #64727D;
+    background-color: @surface1;
     box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -103,9 +104,9 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0 10px;
-    color: #eca553;
+    color: @sapphire;
     border-radius: 8px;
-    background-color: #64727D;
+    background-color: @surface1;
 }
 
 #window,
@@ -124,15 +125,15 @@ button:hover {
 }
 
 #clock {
-    color: #f2b773;
+    color: @sapphire;
     border-radius: 8px;;
-    background-color: #64727D;
+    background-color: @surface1;
     padding-left: 4px;
     padding-right: 4px;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: #64727D;
+    background-color: @surface1;
 }
 
 @keyframes blink {
@@ -190,11 +191,11 @@ label:focus {
 }
 
 #backlight {
-    background-color: #64727D;
+    background-color: @surface1;
 }
 
 #network {
-    background-color: #64727D;
+    background-color: @surface1;
 }
 
 #network.disconnected {
@@ -202,11 +203,11 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #64727D;
+    background-color: @surface1;
 }
 
 #pulseaudio.muted {
-    background-color: #64727D;
+    background-color: @surface1;
 }
 
 #wireplumber {
@@ -219,7 +220,7 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #64727D;
+    background-color: @surface1;
     min-width: 100px;
 }
 
@@ -240,7 +241,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #64727D;
+    background-color: @surface1;
 }
 
 #tray > .passive {
@@ -279,7 +280,7 @@ label:focus {
 }
 
 #language {
-    background: #64727D;
+    background: @surface1;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
@@ -331,5 +332,5 @@ label:focus {
 }
 
 #custom-power {
-    background-color: #64727D;
+    background-color: @surface1;
 }
