@@ -1,0 +1,32 @@
+[git_branch]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[c]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[php]
+symbol = " "
+
+[java]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[python]
+symbol = " "
+
+[docker_context]
+symbol = " "
