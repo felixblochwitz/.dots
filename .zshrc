@@ -147,5 +147,8 @@ fi
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME'
 
+# change the location of the starship config file
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
 # starship prompt
 eval "$(starship init zsh)"
