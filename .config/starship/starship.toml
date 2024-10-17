@@ -1,10 +1,10 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = """$directory\
+format = """$cmd_duration\
+            $directory\
             $git_branch\
             $git_commit\
             $git_status\
-            $cmd_duration\
             $fill\
             $c\
             $lua\
@@ -15,6 +15,8 @@ format = """$directory\
             $battery\
             $character\
             """
+[cmd_duration]
+format = "took [$duration]($style)\n"
 
 [line_break]
 disabled = false
