@@ -7,6 +7,9 @@ return {
         -- pycodestyle
         "E",
         "W",
+      },
+      ignore = {
+        -- TODO: re-enable gradually
         -- flake8-2020
         "YTT",
         -- flake8-bugbear
@@ -53,8 +56,7 @@ return {
         "SLOT",
         -- flake8-raise
         "RSE",
-      },
-      ignore = {
+
         --## Intentionally disabled
         -- flake8-pytest-style
         -- ignore, because so far I'm usually not using pytest
@@ -121,6 +123,7 @@ return {
         "ISC001",
 
         --## TODO: Enable gradually
+        --
         -- Useless statement
         "B018",
         -- Magic number

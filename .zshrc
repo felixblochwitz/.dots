@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -116,6 +123,7 @@ function open() {
 compdef _files open
 
 alias vim="nvim"
+alias nivm="nvim"
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -131,7 +139,7 @@ alias fzn="fzf | xargs nvim"
 alias lvim="NVIM_APPNAME=lazy_vim nvim"
 alias cvim="NVIM_APPNAME=nvchad nvim"
 
-alias ob="cd ~/Documents/obsidian && tmux rename-window notes"
+alias ob="cd ~/documents/obsidian && tmux rename-window notes"
 
 alias sv='source .venv/bin/activate'
 
@@ -147,8 +155,5 @@ fi
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME'
 
-# change the location of the starship config file
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-
-# starship prompt
-eval "$(starship init zsh)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
