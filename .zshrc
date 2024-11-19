@@ -110,21 +110,6 @@ source $ZSH/oh-my-zsh.sh
 # Set XDG_CONFIG_HOME
 export XDG_CONFIG_HOME="$HOME/.config"
 
-function show() {
-    nohup nsxiv -a "$@" &
-}
-
-compdef _files show
-
-function open() {
-    nohup firefox "$@" &
-}
-
-compdef _files open
-
-alias vim="nvim"
-alias nivm="nvim"
-
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -135,17 +120,17 @@ export PATH="$HOME/.local/share/coursier/bin:$PATH"
 # open file from fzf search directly in nvim
 alias fzn="fzf | xargs nvim"
 
+# aliases for nvim
+alias vim="nvim"
+alias nivm="nvim"
+
 # aliases for running different neovim configs
 alias lvim="NVIM_APPNAME=lazy_vim nvim"
 alias cvim="NVIM_APPNAME=nvchad nvim"
 
-alias ob="cd ~/documents/obsidian && tmux rename-window notes"
+alias ob="cd ~/documents/obsidian"
 
 alias sv='source .venv/bin/activate'
-
-#export XDG_CURRENT_DESKTOP=sway
-#export XDG_SESSION_TYPE=wayland
-#export MOZ_ENABLE_WAYLAND=1
 
 export GIT_EDITOR=nvim
 SECRETS_FILE="$XDG_CONFIG_HOME/secrets/keys"
@@ -155,8 +140,15 @@ fi
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dots --work-tree=$HOME'
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# work shit
+# aws sso script alias
+alias aws-sso-login="chmod +x /Users/fblochwitz/repos/dhafner/aws-sso-login/aws-sso-login && /Users/fblochwitz/repos/dhafner/aws-sso-login/aws-sso-login"
+
+export ARROW_HOME=/opt/homebrew
+export PATH=$ARROW_HOME/bin:$PATH
+export PKG_CONFIG_PATH=$ARROW_HOME/lib/pkgconfig:$PKG_CONFIG_PATH
+
